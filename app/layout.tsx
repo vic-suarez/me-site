@@ -6,6 +6,8 @@ const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
   display: 'swap',
   variable: '--font-nunito-sans',
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
+  style: ['normal', 'italic'],
 })
 
 export const metadata: Metadata = {
@@ -23,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nunitoSans.variable} font-sans`}>{children}</body>
+      <body className={`${nunitoSans.variable} font-sans antialiased`}>{children}</body>
     </html>
   )
 } 
