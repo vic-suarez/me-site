@@ -11,8 +11,8 @@ const nunitoSans = Nunito_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Victor Suárez - Data & Analytics Expert",
-  description: "Portfolio website of Victor Suárez, a Data & Analytics Expert with 13+ years of experience.",
+  title: "Vic Suárez | me",
+  description: "Meet Victor Suárez, a Systems Engineer turned Product & Data Leader. 13+ years of impact through automation, analytics, and cross-functional strategy.",
   icons: {
     icon: '/logo-initials.png',
   },
