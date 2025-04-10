@@ -10,6 +10,23 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState("home")
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const projects = [
+    {
+      title: "Personal Portfolio",
+      description: "A modern, responsive portfolio website built with Next.js 14, TypeScript, and Tailwind CSS. Features an interactive skill carousel, smooth animations, and a clean, minimalist design.",
+      image: "/projects-me-site.png",
+      tags: ["Next.js", "TypeScript", "Tailwind CSS", "Radix UI"],
+      link: "/projects/portfolio-site"
+    },
+    {
+      title: "Yape – BCP Cloud Data Migration",
+      description: "A large-scale migration that reshaped how 500+ users across Yape handled sensitive data. I led the transition from BCP's on-prem legacy to Azure, driving both adoption and compliance through strategic planning and cross-functional leadership.",
+      image: "/projects-yape.png",
+      tags: ["Azure", "Data Migration", "Product Management", "Change Management"],
+      link: "/projects/yape-cloud-migration"
+    }
+  ]
+
   // Function to handle smooth scrolling and update active section
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault()
@@ -311,7 +328,51 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Project 1 */}
+            {/* Project 1 - Personal Portfolio */}
+            <div className="bg-white rounded-lg border border-gray-100 shadow-sm overflow-hidden flex flex-col">
+              <div className="p-4">
+                <h3 className="text-2xl font-bold mb-2">Personal Portfolio</h3>
+                <p className="text-gray-600 mb-3">
+                A personal website designed to showcase my work and story through clean design, smart interactions, and strong UX. Built to reflect who I am, what I've done, and what I can build next.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="outline">Next.js</Badge>
+                  <Badge variant="outline">TypeScript</Badge>
+                  <Badge variant="outline">Tailwind CSS</Badge>
+                  <Badge variant="outline">Radix UI</Badge>
+                </div>
+                <a
+                  href="/projects/portfolio-site"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 mt-4"
+                >
+                  View Project
+                  <svg
+                    className="w-4 h-4 ml-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div className="w-full aspect-[4/3] mt-2 overflow-hidden">
+                <Image
+                  src="/projects-me-site.png"
+                  alt="Personal Portfolio"
+                  width={800}
+                  height={600}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Project 2 - Currency Snap */}
             <div className="bg-white rounded-lg border border-gray-100 shadow-sm overflow-hidden flex flex-col">
               <div className="p-4">
                 <h3 className="text-2xl font-bold mb-2">💱 Currency Snap</h3>
@@ -323,6 +384,25 @@ export default function Home() {
                   <Badge variant="outline">Google Cloud Vision API</Badge>
                   <Badge variant="outline">ExchangeRate API</Badge>
                 </div>
+                <a
+                  href="/projects/currency-snap"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 mt-4"
+                >
+                  View Project
+                  <svg
+                    className="w-4 h-4 ml-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </a>
               </div>
               <div className="w-full aspect-[4/3] mt-2 overflow-hidden">
                 <Image
@@ -335,7 +415,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Project 2 */}
+            {/* Project 3 - Farmacias Peruanas */}
             <div className="bg-white rounded-lg border border-gray-100 shadow-sm overflow-hidden flex flex-col">
               <div className="p-4">
                 <h3 className="text-2xl font-bold mb-2">🚚 Delivery Platform – Farmacias Peruanas</h3>
@@ -347,6 +427,25 @@ export default function Home() {
                   <Badge variant="outline">Google BigQuery</Badge>
                   <Badge variant="outline">Internal APIs</Badge>
                 </div>
+                <a
+                  href="/projects/fape"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 mt-4"
+                >
+                  View Project
+                  <svg
+                    className="w-4 h-4 ml-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </a>
               </div>
               <div className="w-full aspect-[4/3] mt-2 overflow-hidden">
                 <Image
@@ -359,7 +458,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Project 3 */}
+            {/* Project 4 - Yape */}
             <div className="bg-white rounded-lg border border-gray-100 shadow-sm overflow-hidden flex flex-col">
               <div className="p-4">
                 <h3 className="text-2xl font-bold mb-2">🏦 Yape & BCP Data Migration</h3>
@@ -371,6 +470,25 @@ export default function Home() {
                   <Badge variant="outline">SQL</Badge>
                   <Badge variant="outline">Power BI</Badge>
                 </div>
+                <a
+                  href="/projects/yape-cloud-migration"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 mt-4"
+                >
+                  View Project
+                  <svg
+                    className="w-4 h-4 ml-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </a>
               </div>
               <div className="w-full aspect-[4/3] mt-2 overflow-hidden">
                 <Image
